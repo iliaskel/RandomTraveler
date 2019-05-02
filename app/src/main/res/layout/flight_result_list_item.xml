@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flight_result_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flight_results_list_item_cv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_airline_logo_going_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/airline_logo_going"
+                app:layout_constraintBottom_toBottomOf="@+id/flights_results_list_item_city_departure_going_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/flights_results_list_item_departure_hour_going_tv"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_airline_logo_coming_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/airline_logo_returning"
+                app:layout_constraintBottom_toBottomOf="@+id/flights_results_list_item_city_departure_returning_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/flights_results_list_item_departure_hour_returning_tv"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_dots_departure_going_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_take_off_going_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_going_tv"
+                app:srcCompat="@drawable/ic_more_horiz_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_take_off_going_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_airline_logo_going_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_going_tv"
+                app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_city_departure_going_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/departure_city"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_going_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_take_off_going_iv" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_departure_hour_going_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/departure_hour"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_going_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_duration_going_tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="@string/flight_duration"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_dots_departure_going_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_going_tv" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_dots_arrival_going_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_duration_going_tv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_arrival_hour_going_tv"
+                app:srcCompat="@drawable/ic_more_horiz_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_land_going_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_dots_arrival_going_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_arrival_hour_going_tv"
+                app:srcCompat="@drawable/ic_flight_land_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_arrival_hour_going_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:text="@string/arrival_hour"
+                android:textAlignment="textEnd"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_dots_arrival_going_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_city_arrival_going_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:maxLines="1"
+                android:text="@string/arrival_city"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_arrival_hour_going_tv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_land_going_iv" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.39999998" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_departure_hour_returning_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/departure_hour"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                android:maxLines="1" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_take_off_returning_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_airline_logo_coming_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_returning_tv"
+                app:srcCompat="@drawable/ic_flight_takeoff_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_city_departure_returning_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/departure_city"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_take_off_returning_iv" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_dots_departure_returning_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_take_off_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_returning_tv"
+                app:srcCompat="@drawable/ic_more_horiz_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_duration_returning_tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="@string/flight_duration"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_dots_departure_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_departure_hour_returning_tv" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_dots_arrival_returning_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_duration_returning_tv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_arrival_hour_returning_tv"
+                app:srcCompat="@drawable/ic_more_horiz_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/flights_results_list_item_drawable_land_returning_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/flights_results_list_item_drawable_dots_arrival_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_arrival_hour_returning_tv"
+                app:srcCompat="@drawable/ic_flight_land_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_arrival_hour_returning_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/arrival_hour"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_dots_arrival_returning_iv"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_city_arrival_returning_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/arrival_city"
+                app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_arrival_hour_returning_tv"
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_land_returning_iv"
+                android:maxLines="1"
+                />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:maxLines="1"
+                android:text="@string/price"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/flights_results_list_item_price_currency_tv" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_price_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/price_label"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/flights_results_list_item_price_tv" />
+
+            <TextView
+                android:id="@+id/flights_results_list_item_price_currency_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/price_currency"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/flights_results_list_item_arrival_hour_returning_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

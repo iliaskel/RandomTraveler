@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">RandomTraveler</string>
+
+    <!-- Sign-in fragment -->
+    <string name="sign_in_sign_up_message">Create new account</string>
+    <string name="sign_in_forgot_password_message">Forgot password</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="sign_in_email_hint">Email</string>
+    <string name="sign_in_application_logo_content_description">Application\'s logo</string>
+    <string name="sign_in_button">Sign in</string>
+
+    <!-- Sign-up fragment -->
+    <string name="sign_up_email_hint">Email</string>
+    <string name="sign_up_password_hint">Password</string>
+    <string name="sign_up_password_confirmation_hint">Confirm Password</string>
+    <string name="sign_up_age_hint">Age</string>
+    <string name="sign_up_sign_up_message">Sign up</string>
+    <string name="application_logo">Application logo</string>
+
+    <!-- Search fragment -->
+    <string name="search_fragment_starting_point">Starting point</string>
+    <string name="search_fragment_budget">Budget</string>
+    <string name="search_fragment_days">Days</string>
+    <string name="search_fragment_search">Search</string>
+
+
+    <string name="airline_logo_going">Airline logo going</string>
+    <string name="airline_logo_returning">Airline logo returning</string>
+    <string name="departure_city">Departure city</string>
+    <string name="flight_duration"> Flight Duration</string>
+    <string name="departure_hour">Departure Hour</string>
+    <string name="arrival_city">Arrival city</string>
+    <string name="arrival_hour">Arrival hour</string>
+    <string name="price">$Price</string>
+    <string name="price_label">Price:</string>
+    <string name="price_currency">EUR</string>
+
+
+</resources>
