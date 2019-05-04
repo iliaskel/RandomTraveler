@@ -4,16 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/flight_result_list_item_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/flight_results_list_item_cv"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -86,10 +91,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:maxLines="1"
                 android:text="@string/departure_hour"
                 app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_going_iv"
-                app:layout_constraintTop_toTopOf="parent"
-                android:maxLines="1" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/flights_results_list_item_duration_going_tv"
@@ -168,10 +173,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:maxLines="1"
                 android:text="@string/departure_hour"
                 app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_drawable_take_off_returning_iv"
-                app:layout_constraintTop_toBottomOf="@+id/divider"
-                android:maxLines="1" />
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
 
             <ImageView
                 android:id="@+id/flights_results_list_item_drawable_take_off_returning_iv"
@@ -252,11 +257,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:maxLines="1"
                 android:text="@string/arrival_city"
                 app:layout_constraintStart_toStartOf="@+id/flights_results_list_item_arrival_hour_returning_tv"
-                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_land_returning_iv"
-                android:maxLines="1"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/flights_results_list_item_drawable_land_returning_iv" />
 
             <TextView
                 android:id="@+id/flights_results_list_item_price_tv"

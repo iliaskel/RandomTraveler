@@ -42,7 +42,7 @@ public class FlightsFragment extends Fragment{
         View v = inflater.inflate(R.layout.flights_results_fragment,container,false);
 
         mFlightsRecyclerView = v.findViewById(R.id.flights_results_rv);
-        mFlightsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        mFlightsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mFlightsRecyclerView.setHasFixedSize(true);
 
         final FlightsAdapter flightsAdapter = new FlightsAdapter(getContext());
