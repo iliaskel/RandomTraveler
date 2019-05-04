@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.randomtraveler.R;
-import com.example.randomtraveler.Utils.StringHelper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +19,7 @@ import androidx.fragment.app.Fragment;
 public class SearchFragment extends Fragment {
 
     private final String TAG = getClass().getSimpleName();
-    private SearchFragmentListener listener;
+    private SearchFragmentListener searchFragmentListener;
 
     private EditText mStartingPointEt;
     private EditText mBudgetEt;
@@ -57,7 +56,7 @@ public class SearchFragment extends Fragment {
                     showToast("Please fill all the required fields");
                 }
                 else{
-                    listener.searchButtonClicked(startingPoint,days,budget);
+                    searchFragmentListener.searchButtonClicked(startingPoint,days,budget);
                 }
             }
         });
@@ -71,7 +70,7 @@ public class SearchFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if(context instanceof SearchFragmentListener){
-            listener = (SearchFragmentListener)context;
+            searchFragmentListener = (SearchFragmentListener)context;
         }
         else {
             throw new RuntimeException(context.toString()
@@ -82,7 +81,7 @@ public class SearchFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        listener = null;
+        searchFragmentListener = null;
     }
 
 

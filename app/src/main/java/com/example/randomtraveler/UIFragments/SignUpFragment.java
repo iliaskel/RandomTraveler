@@ -20,7 +20,7 @@ import androidx.fragment.app.Fragment;
 public class SignUpFragment extends Fragment {
 
     private final String TAG = getClass().getSimpleName();
-    private SignUpFragmentListener listener;
+    private SignUpFragmentListener signUpFragmentListener;
 
     private EditText mEmail;
     private EditText mPassword;
@@ -50,7 +50,7 @@ public class SignUpFragment extends Fragment {
             public void onClick(View v) {
                 Log.d(TAG, "OnSignUpClicked :: Entered ");
                 if(areCredentialsOk()){
-                    listener.OnSignUpClicked(
+                    signUpFragmentListener.OnSignUpClicked(
                             mEmail.getText().toString(),
                             mPassword.getText().toString(),
                             Integer.parseInt(mAge.getText().toString()));
@@ -102,7 +102,7 @@ public class SignUpFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof SignInFragment.SignInFragmentListener) {
-            listener = (SignUpFragment.SignUpFragmentListener) context;
+            signUpFragmentListener = (SignUpFragment.SignUpFragmentListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement FragmentAListener");
@@ -112,7 +112,7 @@ public class SignUpFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        listener = null;
+        signUpFragmentListener = null;
     }
 
     /**

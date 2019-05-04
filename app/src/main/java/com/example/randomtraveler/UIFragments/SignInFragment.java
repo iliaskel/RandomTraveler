@@ -21,7 +21,7 @@ public class SignInFragment extends Fragment {
 
     private final String TAG = getClass().getSimpleName();
 
-    private SignInFragmentListener listener;
+    private SignInFragmentListener signInFragmentListener;
     private EditText mUsernameEt;
     private EditText mPasswordEt;
     private Button mSignInBtn;
@@ -57,7 +57,7 @@ public class SignInFragment extends Fragment {
                 Log.d(TAG, "onClick: Sign in button pressed");
                 String email = mUsernameEt.getText().toString();
                 String password = mPasswordEt.getText().toString();
-                listener.onSignInClicked(email,password);
+                signInFragmentListener.onSignInClicked(email,password);
             }
         });
 
@@ -72,7 +72,7 @@ public class SignInFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Create account",Toast.LENGTH_LONG).show();
-                listener.onCreateAccountClicked();
+                signInFragmentListener.onCreateAccountClicked();
             }
         });
     }
@@ -93,7 +93,7 @@ public class SignInFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof SignInFragmentListener) {
-            listener = (SignInFragmentListener) context;
+            signInFragmentListener = (SignInFragmentListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement FragmentAListener");
@@ -103,7 +103,7 @@ public class SignInFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        listener = null;
+        signInFragmentListener = null;
     }
 
 
