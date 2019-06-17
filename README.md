@@ -7,3 +7,5 @@ At the moment, you can only get ticket prices (using the Kiwi API). Booking thro
 The application is developed only for personal development porpuses and not commercial use.
 
 **NOTE** In order to take results back, you have to provide with the IATA code of your choice as the starting point.
+
+The Application is following the MVVM design pattern, using google's Architectural Components (Room database, LiveData, ViewModel)
